@@ -1,0 +1,7 @@
+*
+!*.tar.gz.enc
+!.githooks
+!.gitignore
+!LICENSE
+!README.md
+!locker.sh
