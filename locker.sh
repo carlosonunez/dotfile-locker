@@ -163,7 +163,6 @@ ensure_encrypted() {
   env="$1"
   fp="$2"
   _ensure_args_provided_or_fail "$env" "$fp"
-  _ensure_environment_or_fail "$env"
   _ensure_archive_encrypted_or_fail "$env"
   _ensure_archive_signed_with_desired_key_or_fail "$env" "$fp"
 }
