@@ -81,12 +81,19 @@ done
 Finally, install `dotfile-locker` into the repo...
 
 ```sh
+# OPTION 1: Install with cURL
 # Optional, but recommended: this .gitignore will prevent you from
 # accidentally committing your dotfiles
 curl -Lo .gitignore https://raw.githubusercontent.com/carlosonunez/dotfile-locker/refs/heads/main/.gitignore
 curl -Lo locker.sh https://raw.githubusercontent.com/carlosonunez/dotfile-locker/refs/heads/main/locker.sh
 chmod +x ./locker.sh
+
+# OPTION 2: Clone this repo and symlink it into your dotfiles:
+git clone https://github.com/carlosonunez/dotfile-locker ~/src/dotfile-locker &&
+ln -s $HOME/src/dotfile-locker/locker.sh ./locker.sh &&
+cat $HOME/src/dotfile-locker/.gitignore >> .gitignore
 ```
+
 
 ...and lock 'em up!
 
